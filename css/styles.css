@@ -172,6 +172,9 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
      display: flex;
      flex-direction: column;
      justify-content: space-between;
+     opacity: 0;
+     visibility: hidden;
+     pointer-events: none;
 }
 
 .menu-close-btn {
@@ -190,8 +193,6 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     align-items: center;
 }
 
-.mob-menu-list {}
-
 .mob-menu-item {
     margin-bottom: 40px;
 }
@@ -203,6 +204,10 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     line-height: 1.11;
     letter-spacing: 0.02em;
     text-transform: capitalize;
+}
+
+.mob-menu-link:hover, .mob-menu-link:focus {
+    color: var(--OCEAN, #404BBF);
 }
 
 .current {
@@ -219,7 +224,7 @@ color: #404BBF;
     gap: 24px;
 }
 
-.mob-address-item {}
+
 
 .mob-address-item-link {
     color: var(--SLATE, #434455);
@@ -228,6 +233,11 @@ color: #404BBF;
     line-height: 1.2;
     letter-spacing: 0.02em;
 }
+
+.mob-address-item-link:hover, .mob-address-item-link:focus {
+color: #404BBF;
+}
+
 
 .mobmenu-networks-list {
 display: flex;
@@ -249,6 +259,10 @@ gap: 40px;
     border-radius: 50%;
     width: 100%;
     height: 100%;
+}
+
+.mobmenu-social-link:hover, .mobmenu-social-link:focus {
+background-color: #404bbf;
 }
 
 /*-------------------------------*/
@@ -602,20 +616,25 @@ transform: translateY(0%);
 
 .footer {
     background: var(--NAVY-BLUE, #2E2F42);
-    padding-top: 100px;
-    padding-bottom: 100px;
+    /* padding-top: 100px;
+    padding-bottom: 100px; */
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 .container-footer {
-    align-items: baseline;
-    display: flex;
+    /* align-items: baseline;
+    display: flex; */
 }
 
 .container-footer-logo {
-    margin-right: 120px;
+    /* margin-right: 120px; */
+    margin-bottom: 72px;
 }
 
 .logo-footer {
-    display: inline-block;
+    /* display: inline-block; */
+    display: flex;
+    justify-content: center;
     margin-bottom: 16px;
 }
 
@@ -633,7 +652,8 @@ max-width: 264px;
 }
 
 .container-footer-socmedia {
-    margin-right: 80px;
+    /* margin-right: 80px; */
+    margin-bottom: 72px;
 }
 
 .footer-soc-text {
@@ -644,6 +664,7 @@ max-width: 264px;
         line-height: 1.5;
         letter-spacing: 0.02em;
         margin-bottom: 16px;
+        text-align: center;
 }
 
 .footer-networks-list {
@@ -689,11 +710,12 @@ max-width: 264px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     margin-bottom: 16px;
+    text-align: center;
 }
 
 .subscribe-form {
-    display: flex;
-    gap: 24px;
+    /* display: flex;
+    gap: 24px; */
 }
 
 .subscribe-input {
@@ -709,6 +731,7 @@ max-width: 264px;
     line-height: 2;
     letter-spacing: 0.04em;
     color: #ffffff;
+    margin-bottom: 24px;
 }
 
 .subscribe-input::placeholder {
@@ -759,7 +782,8 @@ max-width: 264px;
 }
 
 .model {
-width: 408px;
+/* width: 408px; */
+width: 288px;
 min-height: 584px;
 border-radius: 4px;
 background-color: var(--DAIRY, #FCFCFC);
@@ -948,6 +972,20 @@ margin-bottom: 16px;
 .container {
         max-width: 736px;
     }
+/*-----------HEADER-------------*/
+
+.menu-open-btn {
+    display: none;
+}
+
+.header-menu-list {
+    display: flex;
+    gap: 40px;
+}
+.address-list {
+    display: block;
+}
+
 /*-------------HERO--------------*/
 
 .hero {
@@ -1009,6 +1047,33 @@ width: calc((100% - 24px) / 2);
    .portfolio-item {
        width: calc((100% - 24px) / 2);
    }
+
+   /*-----------FOOTER-------------*/
+   .container-footer {
+       display: flex;
+    flex-wrap: wrap;
+   }
+
+   .container-footer-logo {
+       /* margin-right: 120px; */
+       margin-right: 24px;
+       margin-bottom: 72px;
+   }
+   .footer-soc-text {
+       text-align: start;
+   }
+   .input-title {
+    text-align: start;
+   }
+   .subscribe-form {
+    display: flex;
+    gap: 24px;
+   }
+
+   /*------------MODEL--------------*/
+   .model {
+    width: 408px;
+   }
 }
 
 @media screen and (min-width: 1158px) {
@@ -1017,6 +1082,18 @@ width: calc((100% - 24px) / 2);
             padding-left: 15px;
             padding-right: 15px;
         }
+    /*-----------HEADER-------------*/
+
+        .header-container {
+            padding-left: 120px;
+            padding-right: 120px;
+        }
+    
+        .address-list {
+            display: flex;
+            gap: 40px;
+        }
+
     /*-------------HERO--------------*/
     
     .hero {
@@ -1087,5 +1164,18 @@ width: calc((100% - 24px) / 2);
 .portfolio-item {
     width: calc((100% - 24px * 2) / 3);
 }
+/*-----------FOOTER-------------*/
 
+.footer {
+padding-top: 100px;
+padding-bottom: 100px;
+}
+.container-footer-logo {
+margin-right: 120px;
+}
+
+.container-footer-socmedia {
+margin-right: 80px;
+}
+   
 }
