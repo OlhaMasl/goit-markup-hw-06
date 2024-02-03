@@ -28,6 +28,7 @@ address {
 }
 img {
     display: block;
+    width: 100%;
 }
 
 .container {
@@ -49,7 +50,7 @@ img {
         box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
             0px 1px 1px rgba(46, 47, 66, 0.16),
             0px 1px 6px rgba(46, 47, 66, 0.08);
-        padding: 16px;
+    padding: 16px;
 
 }
 .header-navigation {
@@ -65,8 +66,8 @@ img {
 }
 
 .header-menu-item {
-    padding-top: 24px;
-    padding-bottom: 24px;
+    /* padding-top: 24px;
+    padding-bottom: 24px; */
 }
 
 .address-list {
@@ -83,7 +84,7 @@ img {
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    margin-right: 76px;
+    /* margin-right: 76px; */
 }
 
 .logo-header {
@@ -97,7 +98,7 @@ font-weight: 500;
 line-height: 1.5;
 letter-spacing: 0.02em;
 padding-top: 24px;
-padding-bottom: 24px;
+padding-bottom: 20px;
 transition-property: color;
 transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -131,8 +132,8 @@ border-radius: 2px;
     font-style: normal;
 }
 .address-list {
-    padding-top: 24px;
-    padding-bottom: 24px;
+    /* padding-top: 24px; */
+    /* padding-bottom: 24px; */
 } 
 
 .address-item-link {
@@ -141,7 +142,7 @@ font-size: 16px;
 font-weight: 400;
 line-height: 1.5;
 letter-spacing: 0.02em;
-padding-bottom: 24px;
+/* padding-bottom: 24px; */
 transition-property: color;
 transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -168,7 +169,7 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     position: fixed;
     top: 0;
      background-color: #ffffff;
-     padding: 72px 40px 16px 24px;
+     padding: 72px 24px 40px 16px;
      display: flex;
      flex-direction: column;
      justify-content: space-between;
@@ -714,8 +715,14 @@ max-width: 264px;
 }
 
 .subscribe-form {
-    /* display: flex;
-    gap: 24px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* gap: 24px; */
+}
+
+.subscribe-label {
+    margin-bottom: 16px;
 }
 
 .subscribe-input {
@@ -731,7 +738,7 @@ max-width: 264px;
     line-height: 2;
     letter-spacing: 0.04em;
     color: #ffffff;
-    margin-bottom: 24px;
+    /* margin-bottom: 24px; */
 }
 
 .subscribe-input::placeholder {
@@ -974,6 +981,10 @@ margin-bottom: 16px;
     }
 /*-----------HEADER-------------*/
 
+.header-container {
+padding-bottom: 4px;
+}
+
 .menu-open-btn {
     display: none;
 }
@@ -986,13 +997,17 @@ margin-bottom: 16px;
     display: block;
 }
 
+.logo {
+margin-right: 120px;
+}
+
 /*-------------HERO--------------*/
 
 .hero {
     background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/hero-bg-tab.jpg);
     padding-top: 112px;
     padding-bottom: 112px;
-    max-width: 768px;
+    max-width: 736px;
 }
 
 @media screen and (min-device-pixel-ratio: 2),
@@ -1052,21 +1067,30 @@ width: calc((100% - 24px) / 2);
    .container-footer {
        display: flex;
     flex-wrap: wrap;
+    padding-left: 108px;
    }
 
    .container-footer-logo {
        /* margin-right: 120px; */
        margin-right: 24px;
-       margin-bottom: 72px;
    }
+
+   .logo-footer {
+    justify-content: start;
+   }
+
    .footer-soc-text {
        text-align: start;
    }
    .input-title {
     text-align: start;
    }
+
+   .subscribe-label {
+       margin-bottom: 0;
+   }
+   
    .subscribe-form {
-    display: flex;
     gap: 24px;
    }
 
@@ -1087,12 +1111,17 @@ width: calc((100% - 24px) / 2);
         .header-container {
             padding-left: 120px;
             padding-right: 120px;
+            padding-bottom: 16px;
+                
         }
     
         .address-list {
             display: flex;
             gap: 40px;
         }
+        .logo {
+            margin-right: 76px;
+         }
 
     /*-------------HERO--------------*/
     
@@ -1128,6 +1157,16 @@ width: calc((100% - 24px) / 2);
     .icons-item {
         display: flex;
         visibility: visible;
+    }
+
+    .features-item-title {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.2;
+        }
+
+    .feature-item-text {
+        font-weight: 400;
     }
 
 
@@ -1172,10 +1211,12 @@ padding-bottom: 100px;
 }
 .container-footer-logo {
 margin-right: 120px;
+margin-bottom: 0;
 }
 
 .container-footer-socmedia {
 margin-right: 80px;
+margin-bottom: 0;
 }
    
 }
